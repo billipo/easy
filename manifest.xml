@@ -5,10 +5,10 @@
   <ProviderName>Contoso</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Easy To-Do It"/>
-  <Description DefaultValue="A template to get started."/>
+  <Description DefaultValue="Make complex and repetitive tasks Easy."/>
   <IconUrl DefaultValue="https://billipo.github.io/easy/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://billipo.github.io/easy/assets/icon-64.png"/>
-  <SupportUrl DefaultValue="https://www.contoso.com/help"/>
+  <SupportUrl DefaultValue="https://www.google.com"/>
   <AppDomains>
     <AppDomain>https://billipo.github.io/easy/</AppDomain>
   </AppDomains>
