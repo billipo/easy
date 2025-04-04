@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Manager</title>
+    <link rel="stylesheet" href="taskpane.css">
+</head>
+<body>
+    <div class="container">
+        <div class="add-task">
+            <input type="text" id="task-input" placeholder="Add a new task...">
+            <button id="add-task-button">Add</button>
+        </div>
+        <ul id="task-list" class="task-list"></ul>
+        <button id="open-saved-lists">Save / Clear List</button>
+    </div>
+	
+	<div id="emoji-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Enter a better emoji 😀</h2>
+        <p>Windows Key + period key on Windows; the Globe key on Mac or Cmd + Ctrl + Spacebar</p>
+        <input type="text" id="emoji-input" maxlength="2">
+        <button id="confirm-emoji">Confirm</button>
+    </div>
+	</div>
+
+    <div id="saved-lists-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Save / Clear List</h2>
+            <div class="save-list">
+                <input type="text" id="list-name-input" placeholder="Name your list...">
+                <button id="save-list-button">Save List</button>
+            </div>
+            <div class="load-list">
+                <select id="saved-lists-dropdown">
+                    <option value="" disabled selected>Select a saved list</option>
+                </select>
+                <button id="load-list-button">Load List</button>
+                <button id="delete-list-button">Delete List</button>
+				<button id="clear-list-button">Clear List</button>
+            </div>
+        </div>
+    </div>
+	<div id="clear-list-modal" class="modal">
+    <div class="modal-content">
+        <h2>Clear List Confirmation</h2>
+        <p>Are you sure you want to clear the current list?</p>
+        <button id="confirm-clear">Yes, Clear List</button>
+        <button id="cancel-clear">Cancel</button>
+    </div>
+	</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <script src="taskpane.js"></script>
+</body>
+</html>
