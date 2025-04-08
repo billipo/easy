@@ -136,6 +136,21 @@ function renderTask(taskText, emoji = '👆') {
         if (e.target === modal) modal.style.display = 'none';
     });
 
+saveListButton.addEventListener('click', () => {
+    const listName = listNameInput.value.trim();
+    if (listName === '') return;
+
+    const tasks = Array.from(taskList.querySelectorAll('li')).map(li => ({
+        name: li.querySelector('button').textContent,
+        completed: li.querySelector('button').classList.contains('completed'),
+        emoji: li.querySelector('.task-emoji').textContent,
+    }));
+
+    localStorage.setItem(listName, JSON.stringify(tasks));
+    updateSavedListsDropdown();
+    listNameInput.value = '';
+});
+
 /*saveListButton.addEventListener('click', async () => {
     const now = Date.now();
 
