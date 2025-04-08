@@ -136,7 +136,7 @@ function renderTask(taskText, emoji = '👆') {
         if (e.target === modal) modal.style.display = 'none';
     });
 
-saveListButton.addEventListener('click', async () => {
+/*saveListButton.addEventListener('click', async () => {
     const now = Date.now();
 
     // Check if trial start date is saved
@@ -158,7 +158,7 @@ saveListButton.addEventListener('click', async () => {
             }
             return;
         }
-    }
+    }*/
 
     // Save the list as usual
     const listName = listNameInput.value.trim();
